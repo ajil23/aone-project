@@ -4,12 +4,12 @@
 
         <!-- PWA  -->
         <meta name="theme-color" content="#6777ef"/>
-        <link rel="apple-touch-icon" href="{{ asset('teslogo.png') }}">
+        <link rel="apple-touch-icon" href="{{ asset('logo.png') }}">
         <link rel="manifest" href="{{ asset('/manifest.json') }}">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>CepatTanggap</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
