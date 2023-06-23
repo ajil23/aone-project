@@ -1,9 +1,17 @@
 {
+<<<<<<< HEAD
     "name": "Aone Project",
     "short_name": "LPT",
     "start_url": "/index.php",
     "background_color": "#6777ef",
     "description": "Aone Project PWA",
+=======
+    "name": "CepatTanggap",
+    "short_name": "LPT",
+    "start_url": "/index.php",
+    "background_color": "#6777ef",
+    "description": "CepatTanggap",
+>>>>>>> 46a9d1df2194901e7909eb829e97eb3caa47d823
     "display": "fullscreen",
     "theme_color": "#6777ef",
     "icons": [

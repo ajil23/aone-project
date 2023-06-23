@@ -24,6 +24,7 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
+<<<<<<< HEAD
         return view('admin.index');
     })->name('dashboard');
 });
@@ -34,3 +35,8 @@ Route::middleware([
 Route::prefix('pusats')->group(function(){
     Route::get('/pusat/view',[PusatController::class, 'PusatView'])->name('pusat.view');
 });
+=======
+        return view('dashboard');
+    })->name('dashboard');
+});
+>>>>>>> 46a9d1df2194901e7909eb829e97eb3caa47d823
