@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\PusatController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +24,13 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('admin.index');
     })->name('dashboard');
+});
+
+
+
+
+Route::prefix('pusats')->group(function(){
+    Route::get('/pusat/view',[PusatController::class, 'PusatView'])->name('pusat.view');
 });
