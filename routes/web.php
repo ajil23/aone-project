@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\PusatController;
+use App\Http\Controllers\Backend\NakesController;
+use App\Http\Controllers\Backend\AmbulanceController;
+use App\Http\Controllers\Backend\PasienController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,4 +36,16 @@ Route::middleware([
 
 Route::prefix('pusats')->group(function(){
     Route::get('/pusat/view',[PusatController::class, 'PusatView'])->name('pusat.view');
+});
+
+Route::prefix('nakess')->group(function(){
+    Route::get('/nakes/view',[NakesController::class, 'NakesView'])->name('nakes.view');
+});
+
+Route::prefix('ambulances')->group(function(){
+    Route::get('/ambulance/view',[AmbulanceController::class, 'AmbulanceView'])->name('ambulance.view');
+});
+
+Route::prefix('pasiens')->group(function(){
+    Route::get('/pasien/view',[PasienController::class, 'PasienView'])->name('pasien.view');
 });
