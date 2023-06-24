@@ -18,7 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout')->middleware('auth');
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('/logout', [AdminController::class, 'perform'])->name('logout.perform');
+ });
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -28,9 +30,6 @@ Route::middleware([
         return view('admin.index');
     })->name('dashboard');
 });
-
-
-
 
 Route::prefix('pusats')->group(function(){
     Route::get('/pusat/view',[PusatController::class, 'PusatView'])->name('pusat.view');
