@@ -2,9 +2,9 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 <!-- Sidebar - Brand -->
-<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+<a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('dashboard')}}">
     <div class="navbar-toggler-icon">
-        <img class="navbar-toggler-icon" src="backend/img/logo.png" >
+        <img class="navbar-toggler-icon" src="{{asset('backend/img/logo.png')}}" >
     </div>
     <div class="sidebar-brand-text mx-3">CepatTanggap</div>
 </a>
@@ -14,7 +14,7 @@
 
 <!-- Nav Item - Dashboard -->
 <li class="nav-item active">
-    <a class="nav-link" href="index.html">
+    <a class="nav-link" href="{{route('dashboard')}}">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
 </li>
@@ -31,21 +31,21 @@
 
 <!-- Nav Item - Pertolongan Nakes Collapse Menu -->
 <li class="nav-item">
-    <a class="nav-link collapsed" href="#">
+    <a class="nav-link collapsed" href="{{route('nakes.view')}}">
         <i class="fa fa-user-md"></i>
         <span>Pertolongan Nakes</span></a>
 </li>
 
 <!-- Nav Item - Ambulance Collapse Menu -->
 <li class="nav-item">
-    <a class="nav-link collapsed" href="#">
+    <a class="nav-link collapsed" href="{{route('ambulance.view')}}">
         <i class="fa fa-ambulance"></i>
         <span>Pertolongan Ambulance</span></a>
 </li>
 
 <!-- Nav Item - Data Pasien Collapse Menu -->
 <li class="nav-item">
-    <a class="nav-link collapsed" href="#">
+    <a class="nav-link collapsed" href="{{route('pasien.view')}}">
         <i class="fa fa-server"></i>
         <span>Data Pasien</span></a>
 </li>
