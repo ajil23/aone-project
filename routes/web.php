@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Backend\PusatController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout')->middleware('auth');
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
