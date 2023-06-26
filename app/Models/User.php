@@ -25,8 +25,9 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'email',
+        'nomor',
         'password',
+        'role',
     ];
 
     /**
@@ -46,9 +47,9 @@ class User extends Authenticatable
      *
      * @var array<string, string>
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    // protected $casts = [
+    //     'nomor_verified_at' => 'datetime',
+    // ];
 
     /**
      * The accessors to append to the model's array form.
