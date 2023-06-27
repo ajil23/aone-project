@@ -5,6 +5,8 @@ use App\Http\Controllers\Backend\PusatController;
 use App\Http\Controllers\Backend\NakesController;
 use App\Http\Controllers\Backend\AmbulanceController;
 use App\Http\Controllers\Backend\PasienController;
+use App\Http\Controllers\Backend\PenggunaController;
+use App\Http\Controllers\SesiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +20,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/',[SesiController::class,'index']);
+Route::post('/',[SesiController::class,'login']);
+
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/logout', [AdminController::class, 'perform'])->name('logout.perform');
  });
@@ -34,18 +40,10 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::prefix('pusats')->group(function(){
-    Route::get('/pusat/view',[PusatController::class, 'PusatView'])->name('pusat.view');
-});
-
-Route::prefix('nakess')->group(function(){
+Route::middleware(['auth'])->group(function() {
     Route::get('/nakes/view',[NakesController::class, 'NakesView'])->name('nakes.view');
-});
-
-Route::prefix('ambulances')->group(function(){
     Route::get('/ambulance/view',[AmbulanceController::class, 'AmbulanceView'])->name('ambulance.view');
-});
-
-Route::prefix('pasiens')->group(function(){
+    Route::get('/pusat/view',[PusatController::class, 'PusatView'])->name('pusat.view');
     Route::get('/pasien/view',[PasienController::class, 'PasienView'])->name('pasien.view');
+    Route::get('/pengguna/view',[PenggunaController::class, 'PenggunaView'])->name('pengguna.view');
 });

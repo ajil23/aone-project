@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .picture {
-            height: 350px;
+            height: 125px;
             width: 350px;
             display: block;
             margin-top: auto;
@@ -57,7 +57,7 @@
     <title>Pasien</title>
 </head>
 <div class="picture-container">
-    <img class="picture" src="logo-2.png" alt="CepatTanggap Logo">
+    <img class="picture" src="{{asset('backend/img/logo-2.png')}}" alt="CepatTanggap Logo">
 </div>
 <button type="button" class="btn btn--primary btn--block">
     Panggil Ambulans

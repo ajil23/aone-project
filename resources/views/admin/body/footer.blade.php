@@ -2,7 +2,7 @@
 <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Aone 2023</span>
+                        <span>&copy; Aone. All rigths reserved</span>
                     </div>
                 </div>
             </footer>
