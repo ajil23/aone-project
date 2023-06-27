@@ -1325,7 +1325,7 @@ img{
 
                         <div class="questions__content">
                             <p class="questions__description">
-                                Benas, begitu anda menekan tombol 'Panggil Ambulans' maka secara otomatis sistem akan mengirim panggilan anda ke rumah sakit atau pusat kesehatan yang terdekat dari lokasi anda.
+                                Benar, begitu anda menekan tombol 'Panggil Ambulans' maka secara otomatis sistem akan mengirim panggilan anda ke rumah sakit atau pusat kesehatan yang terdekat dari lokasi anda.
                             </p>
                         </div>
                     </div>
